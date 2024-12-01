@@ -1,0 +1,145 @@
+:root {
+  --color-background: #3e4c53;
+  ;
+}
+
+body {
+  margin: 0;
+  background: var(--color-background);
+  font-family: "Euclid Circular A", "Poppins", sans-serif;
+  color: #f0e5ff;
+}
+
+main {
+  height: 100vh;
+  overflow-x: hidden;
+  overflow-y: auto;
+  perspective: 2px;
+}
+
+section {
+  transform-style: preserve-3d;
+  position: relative;
+  height: 80vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+}
+
+section:last-child {
+  height: 60vh;
+}
+
+.no-parallax {
+  background-color: var(--color-background);
+  z-index: 999;
+  padding: 0 40px;
+  gap: 20px;
+  justify-content: space-between;
+  flex-direction: column;
+  text-align: center;
+}
+
+.no-parallax p {
+  margin: 0;
+  font-size: 1.0em;
+}
+
+.no-parallax img {
+  width: 100%;
+  max-width: 220px;
+  margin: 10px 0;
+}
+
+.parallax {
+  height: 70vh;
+}
+
+section h1, section h2 {
+  text-align: center;
+  font-size: 2em;
+}
+
+.parallax::after {
+  content: " ";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  transform: translateZ(-1px) scale(1.5);
+  background-size: 100%;
+  z-index: -1;
+}
+
+.bg::after {
+  background-image: url("/img/brochure/water_drop_city.jpeg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.bg_2::after {
+  background-image: url("/img/brochure/work_group.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 150vh !important;
+}
+.bg_3::after {
+  background-image: url("/img/brochure/agreement.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.bg_4::after {
+  background-image: url("/img/brochure/baret_about.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.bg_5::after {
+  background-image: url("/img/brochure/technology_investment.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+footer .footer-inner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-right: 0;
+}
+
+footer ul {
+  list-style: none;
+  padding: 0;
+}
+
+footer ul li {
+  font-weight: 400;
+  opacity: 0.6;
+  margin-bottom: 10px;
+}
+
+/* Media Queries */
+@media (min-width: 768px) {
+  .no-parallax {
+    padding: 0 80px;
+    flex-direction: row;
+    text-align: left;
+  }
+
+  section h1, section h2 {
+    font-size: 2.5em;
+  }
+
+  footer .footer-inner {
+    flex-direction: row;
+    margin-right: -100px;
+  }
+
+  footer ul {
+    padding: 0 5px 0 0;
+  }
+
+  footer ul:last-of-type {
+    padding: 0;
+  }
+}

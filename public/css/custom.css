@@ -1,0 +1,188 @@
+@import url('https://fonts.googleapis.com/css2?family=Didact+Gothic&display=swap');
+@import url('https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.css');
+:root {
+    --talent-blue: #007D8A;
+    /*talent-blue alternative for secondary*/
+
+
+    --primary-color: #182a38;
+    /* Arka plan rengi*/
+    --secondary-color: #1ABC9C;
+    /*Teal Blue*/
+    --thirth-orange: #F08300;
+    /*Vibrant Orange*/
+    --tertiary-color: #BDC3C7;
+    /*(Supporting color): Soft Gray*/
+    --background-color: #F4F6F7;
+    /* Off-White*/
+}
+
+.bg-primary {
+    background-color: var(--primary-color) !important;
+}
+
+.custom-page-wrapper {
+    margin-top: 80px !important;
+}
+
+.h600 {
+    height: 600px;
+}
+
+.slide_img_left{
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: top left;
+}
+.slide_img_right {
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: top right;
+}
+.line-height-slide{
+    line-height: 1.4;
+}
+
+
+
+/* slider */
+/*1.sıfır maliyet
+2. kontrolde ustalaşmak
+3. enerjiyi izleyin verimi yönetin
+*/
+@media only screen and (min-width: 575px) {/*desktop*/
+  .slide_img_left, .slide_img_right{background-size: cover;background-position: center;}
+  .slide_img_left:nth-child(1){background-image: url(/img/homePage/146.jpg); } 
+  .slide_img_left:nth-child(2){background-image: url(/img/homePage/terfi_merkezi2.jpg); }
+  .slide_img_left:nth-child(3){background-image: url(/img/money_plant.jpg);}
+  
+  .slide_img_right:nth-child(3){background-image: url(/img/technology_investment.jpg);}
+  .slide_img_right:nth-child(2){background-image: url(/img/control_together.jpg);}
+  .slide_img_right:nth-child(1){background-image: url(/img/technology_investment.jpg);}
+  #cont_id .col-md-4 {
+    text-align: center;
+    margin: auto;
+    
+}
+.featured{padding-left:43%};
+#cont_id img{
+  width:100%;
+  }
+  .background{background-color:#444 ;
+    background-position: center;}
+    .downBtn {
+      border: none;
+      background-color: transparent;
+      outline:none;
+      font-weight: 700 !important;
+      color: #165ba0;
+    }
+    .downBtn img{
+      width: 74px !important;
+      }
+      .downDropdown:hover .downBtn {cursor:pointer;}
+      .downDropdown-content {
+        display: none;
+        position: absolute;
+        background-color: transparent;
+        min-width: 50px;
+        z-index: 1;
+      }
+       .downBtn down{
+        width: 150px;
+      }
+      .downDropdown-content a {
+        height:24px;
+        width: 54px;
+        color: white !important;
+        font-size:12px;
+        text-decoration: none;
+        display: block;
+        text-align:right;
+        border-radius: 4px;
+        background-color: #bcbcbb ;
+        margin: 1.4px;
+        margin-left: 0;
+      }
+      .downDropdown-content a:hover {background-color: #f29100;color:white;}
+
+.downDropdown:hover .downDropdown-content {display: block;}
+}
+
+.background a {color: #F08300;}
+
+@media only screen and (max-width: 575px) {/*mobile*/
+  .slide_img_left:nth-child(1){background-image: url(/img/money_plant.jpg); } 
+  .slide_img_left:nth-child(2){background-image: url(/img/control_together.jpg); }
+  .slide_img_left:nth-child(3){background-image: url(/img/technology_investment.jpg);}
+  .featured{padding-left:0%};
+  .downBtn {
+    border: none;
+    background-color: transparent;
+    outline:none;
+    font-weight: 700 !important;
+    color: #165ba0;
+  }
+  .downBtn img{
+    width: 150px !important;
+    }
+    .downDropdown:hover .downBtn {cursor:pointer;}
+    .downDropdown-content {
+      display: none;
+      position: absolute;
+      background-color: transparent;
+      max-width: 50px;
+      z-index: 1;
+    }
+     .downBtn down{
+      width: 150px;
+    }
+    .downDropdown-content a {
+      height:24px;
+      width: 54px;
+      color: white !important;
+      font-size:12px;
+      text-decoration: none;
+      display: block;
+      text-align:right;
+      border-radius: 4px;
+      background-color: #bcbcbb ;
+      margin: 1.4px;
+      margin-left: 0;
+    }
+    .downDropdown-content a:hover {background-color: #f29100;color:white;}
+
+.downDropdown:hover .downDropdown-content {display: block;}
+  
+}
+
+#header .header-nav.header-nav-line nav > ul li:not(:hover) > a.active, #header .header-nav.header-nav-line nav > ul li:hover> a.active{
+  color: #f8f8f8 !important;
+  /*aktif menü rengi*/
+
+}
+#header .header-nav.header-nav-line nav >ul li:hover > a{
+  color: #fff !important;
+}
+
+
+ #header .dropdown-item{
+  line-height: 35px;
+}
+i.fa-solid{
+  color: #0088CC;
+  border-color: #0088CC;
+}
+#footer p, #footer li, #footer span, #footer a:not(.btn):not(.no-footer-css) {
+  color: #fff;/*footer line color */
+}
+.custom-bg-grey-1 {
+		background: #434853 !important;
+}
+.footer_div{    margin-left: calc(3.5 * var(--bs-gutter-x))!important;}
+
+
+.parallax{
+  margin: 20px 0 !important;
+  padding: 20px 0 !important;
+}

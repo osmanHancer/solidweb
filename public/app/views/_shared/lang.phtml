@@ -1,0 +1,44 @@
+<li class="dropdown">
+
+    <a href="#" class="nav-link dropdown-toggle">
+        <img src="/img/icons/<?= $lang ?>.png" alt="" width="24" />
+        <span style="padding-left:4px;padding-top:4px;"><?= strtoupper($lang) ?></span>
+    </a>
+    <ul class="dropdown-menu">
+        <?php if ($lang != 'tr') {  ?>
+            <li>
+                <a href="/tr/<?= $page ?>" class="nav-link ">
+                    <img src="/img/icons/tr.png" alt="" width="24" />
+                    <span style="padding-left:4px;padding-top:4px;">TR</span>
+                </a>
+            </li>
+        <?php }
+        if ($lang != 'en') { ?>
+            <li>
+                <a href="/en/<?= $page ?>" class="nav-link">
+                    <img src="/img/icons/en.png" alt="" width="24" />
+                    <span style="padding-left:4px;padding-top:4px;">EN</span>
+                </a>
+            </li>
+        <?php }
+        if ($lang != 'ru') { ?>
+            <li>
+                <a href="/ru/<?= $page ?>" class="nav-link">
+                    <img src="/img/icons/ru.png" alt="" width="24" />
+                    <span style="padding-left:4px;padding-top:4px;">RU</span>
+                </a>
+            </li>
+        <?php }  ?>
+        <?php if ($lang != 'fr') { ?>
+            <li>
+                <a href="/fr/<?= $page ?>" class="nav-link">
+                    <img src="/img/icons/fr.png" alt="" width="24" />
+                    <span style="padding-left:4px;padding-top:4px;">FR</span>
+                </a>
+            </li>
+       
+        
+        <?php }  ?>
+
+    </ul>
+</li>

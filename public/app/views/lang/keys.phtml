@@ -1,0 +1,80 @@
+<?php
+include __DIR__ . "/_head.phtml";
+
+?>
+<script>
+    const keys = <?php echo json_encode($keys ?? null) ?>;
+    let KEYFIELDS_FORM = <?= json_encode($FIELDS_FORM) ?>;
+
+    let FIELDS_FORM = <?= json_encode($FIELDS_FORM) ?>;
+
+    async function edit(index) {
+        var eRow = document.getElementById("row_" + index);
+        let fd = new FormData();
+        if (index > 0) 
+        {
+            fd.append("_action", "update")
+            eRow.querySelectorAll("input").forEach((e) => {
+            let inpVal = e.value;
+            console.log(index,inpVal);
+            let field = e.attributes["data-filed"].value;
+            if (field.startsWith("time")) return;
+            fd.append(field, e.value);
+        });
+
+        const res = await fetch('/lang/svcKeySave', {
+            method: "POST",
+            body: fd,
+        })
+        text = await res.text();
+        }
+
+       else  {fd.append("_action", "insert");
+     
+        formFill(_activeEditItem, FIELDS_FORM);
+ 
+       }
+    }
+</script>
+<?php require_once __DIR__ . "/_formkeys.phtml"; ?>
+<style>
+    td,
+    tr {
+        max-width: 250px;
+        word-wrap: break-word;
+    }
+</style>
+<table id="vcardList" class="styled-table">
+    <thead>
+        <tr>
+            <?php foreach ($TABLE_FIELDS as $value) : ?>
+                <th> <?php echo $value; ?></th>
+            <?php endforeach; ?>
+            <td>
+                <button type="button" class="btn btn-secondary" onclick="edit(`-1`)">Ekle</button>
+            </td>
+        </tr>
+    </thead>
+    <tbody>
+        <?php foreach ($keys as $index => $value) : ?>
+            <tr id="row_<?= $index ?>">
+                <?php foreach ($TABLE_FIELDS as $ind => $h) : ?>
+                    <td>
+                        <input type="text" value="<?= $value[$h] ?>" data-filed="<?= $h ?>" <?= $h == 'kid' ? 'disabled' : '' ?> />
+                    </td>
+                <?php endforeach; ?>
+                <td>
+                    <button type="button" class="btn btn-secondary" onclick="edit('<?= $index ?>')">Save</button>
+
+                </td>
+            </tr>
+        <?php endforeach; ?>
+    </tbody>
+</table>
+
+
+
+
+<?php
+include __DIR__ . "/_footer.phtml";
+?>

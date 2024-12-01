@@ -1,0 +1,62 @@
+<?php include V_PATH . '/_parts/_head.phtml'; ?>
+<div role="main" class="main">
+    <?php
+    $pageTitle = "Aqua Guide - Measure Mate";
+    include V_PATH . '/_parts/title.phtml';
+    ?>
+    <style>
+        .owl-item {
+            padding: 0 5px;
+        }
+    </style>
+
+
+    <section class="ls section_padding_top_50 section_padding_bottom_100">
+        <div class="container" id="cont_id" style="margin-top:130px;">
+            <div class="jumbotron p-1 p-md-1 bg-white">
+                <h2 class="display-4 " style="color: #605e5e;font-weight:600;font-size:27px;">
+                    <?= LH::t("aqua_guide_m") ?> </h2>
+                <p></p>
+                <p style="color: #343a40; font-weight: normal;">
+                    <?= LH::t("aqua_guide_i") ?></p>
+                </p>
+            </div>
+
+
+            <div class="container">
+                <div class="row">
+                    <div class="col-12">
+                        <div class="owl-carousel nav-inside show-nav-hover dots-inside mb-0" data-plugin-options="{'items': 3, 'loop': true, 'autoplay': true, 'autoplayTimeout': 3000, 'autoplayHoverPause': false, 'nav': true, 'dots': true, 'animateOut': 'fadeOut'}">
+
+                            <div>
+                                <img src="/img/aquaguide/1.png" alt="" />
+                            </div>
+                            <div>
+                                <img src="/img/aquaguide/2.png" alt="" />
+                            </div>
+                            <div>
+                                <img src="/img/aquaguide/3.png" alt="" />
+                            </div>
+                            <div>
+                                <img src="/img/aquaguide/4.png" alt="" />
+                            </div>
+                            <div>
+                                <img src="/img/aquaguide/5.png" alt="" />
+                            </div>
+                            <div>
+                                <img src="/img/aquaguide/6.png" alt="" />
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+
+    </section>
+</div>
+
+
+
+<?php include V_PATH . '/_parts/_footer.phtml'; ?>

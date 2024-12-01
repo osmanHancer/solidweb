@@ -1,0 +1,194 @@
+<?php
+include V_PATH . '/_parts/_head.phtml';
+?>
+<div role="main" class="main">
+<?php
+$pageTitle=LH::t("contact");
+include V_PATH . '/_parts/title.phtml';
+?>
+<div role="main" class="main">
+
+
+
+<div class="custom-page-wrapper pt-5 pb-1">
+    <div class="spacer py-4 my-5"></div>
+    <div class="container container-xl-custom pb-5 mb-5">
+        <div class="row pb-3">
+            <div class="col-lg-6 position-relative">
+                <div class="position-absolute z-index-0 appear-animation" data-appear-animation="fadeInRightShorter" data-appear-animation-delay="1500" style="top: 110px; left: -206px;">
+                    <h2 class="text-color-dark custom-stroke-text-effect-1 custom-big-font-size-1 font-weight-black opacity-1 mb-0"> <?=LH::t("your_place")?></h2>
+                </div>
+                <div class="overflow-hidden mb-2">
+                    <h2 class="text-color-default positive-ls-3 line-height-3 text-4 mb-0 appear-animation" data-appear-animation="maskUp" data-appear-animation-delay="750"><?=LH::t("we_are_here_t_h")?></h2>
+                </div>
+                <div class="overflow-hidden mb-4">
+                    <h3 class="text-transform-none text-color-dark font-weight-black text-10 line-height-2 mb-0 appear-animation" data-appear-animation="maskUp" data-appear-animation-delay="850"><?=LH::t("complete_your_project")?></h3>
+                </div>
+                <img src="img/demos/architecture-2/divider.jpg" class="img-fluid opacity-5 mb-4 mt-2 appear-animation" data-appear-animation="fadeInUpShorterPlus" data-appear-animation-delay="950" alt="" />
+                <p class="custom-font-tertiary text-5 line-height-4 mb-4 mt-2 appear-animation" data-appear-animation="fadeInUpShorter" data-appear-animation-delay="1050"> <?=LH::t("do_you_want_t_c")?></p>
+           
+                <div class="row">
+                    <div class="col-lg-4 appear-animation" data-appear-animation="fadeInUpShorter" data-appear-animation-delay="550">
+                        <h4 class="alternative-font-4 text-color-dark font-weight-bold line-height-3 text-3-5 mb-0"><?=LH::t("work_inquiries")?></h4>
+                        <a href="tel:444 12 05" class="text-decoration-none text-color-default text-color-hover-primary">444 12 05</a>
+                     
+                    </div>
+                    <div class="col-lg-4 appear-animation" data-appear-animation="fadeInUpShorter" data-appear-animation-delay="550">
+                        <h4 class="alternative-font-4 text-color-dark font-weight-bold line-height-3 text-3-5 mt-4 mt-lg-0 mb-0"><?=LH::t("address")?></h4>
+                        <p class="mb-0">Yıldırım Beyazıt Mah.<br>Aşık Veysel Blv. Teknopoark 5.Bina No:67/4/24<br><br>Melikgazi/Kayseri</p>
+                        <h4 class="alternative-font-4 text-color-dark font-weight-bold line-height-3 text-3-5 mt-4 mb-0"><?=LH::t("e_mail")?></h4>
+                        <a href="mailto:noreply@bpv.com.tr" class="text-decoration-none text-color-default text-color-hover-primary">info@solidelectron.com</a>
+                    </div>
+                    <div class="col-lg-4 appear-animation" data-appear-animation="fadeInUpShorter" data-appear-animation-delay="550">
+                        <h4 class="alternative-font-4 text-color-dark font-weight-bold line-height-3 text-3-5 mt-4 mt-lg-0 mb-0"><?=LH::t("working_hours")?></h4>
+                        <p class="mb-0"><?=LH::t("monday_f_9")?></p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-6">
+                <div class="overflow-hidden mb-4 mt-4">
+                    <h3 class="text-transform-none text-color-dark font-weight-black text-7 line-height-2 mb-0 pt-3 appear-animation" data-appear-animation="maskUp" data-appear-animation-delay="1300"><?=LH::t("send_message")?></h3>
+                </div>
+                <form class="contact-form custom-form-style-1 appear-animation" action="/php/contact-form-recaptcha-v2.php" method="POST"  data-appear-animation="fadeInUpShorter" data-appear-animation-delay="1400">
+                    <div class="contact-form-success alert alert-success d-none mt-4">
+                      <strong> <?=LH::t("success")?></strong> <?=LH::t("your_message_has_b_s")?> 
+                    </div>
+
+                    <div class="contact-form-error alert alert-danger d-none mt-4">
+                        <!-- <strong><?=LH::t("error")?></strong> <?=LH::t("there_was_an_e_s")?> -->
+                        <span class="mail-error-message text-1 d-block"></span>
+                    </div>
+
+                    <div class="row">
+                        <div class="form-group col mb-3">
+                            <input type="text" value="" data-msg-required="Lütfen adınızı giriniz." maxlength="100" class="form-control border-radius-0" name="name" id="name" required placeholder="Name *">
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="form-group col mb-3">
+                            <input type="email" value="" data-msg-required="Lütfen e-mail adresinizi giriniz." data-msg-email="Please enter a valid email address." maxlength="100" class="form-control border-radius-0" name="email" id="email" required placeholder="<?=LH::t("e_mail")?> *">
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="form-group col mb-3">
+                            <input type="text" value="" data-msg-required="Lütfen konuyu belirtiniz" maxlength="100" class="form-control border-radius-0" name="subject" id="subject" required placeholder="Subject *">
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="form-group col mb-4">
+                            <textarea maxlength="5000" data-msg-required="Lütfen mesajınızı girin." rows="5" class="form-control border-radius-0" name="message" id="message" required placeholder="Message *"></textarea>
+                        </div>
+                    </div>
+                    <div style="margin-bottom: 2%;" class="g-recaptcha" data-sitekey="6LfuBc8pAAAAALLkaNGKa_txqTlUjH3vfTU2n1Cl"></div>
+                    <div class="row">
+                        <div class="form-group col mb-0">
+                            <button type="submit" class="btn btn-primary custom-btn-style-1 font-weight-bold text-3 px-5 py-3" data-loading-text="Loading..."><?=LH::t("send")?></button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Google Maps - Go to the bottom of the page to change settings and map location. -->
+<div ><iframe class="google-map h-100 m-0" style="min-height: 500px;" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3113.154936184227!2d35.530296875821385!3d38.71425167176373!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x152b138bf8090325%3A0x768f2a2208bda995!2sSolid%20Electron%20Kontrol%20Teknolojileri!5e0!3m2!1str!2str!4v1684848835773!5m2!1str!2str" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe></div>
+
+</div> 
+
+
+<?php
+include V_PATH . '/_parts/_footer.phtml';
+?>
+<script src="https://www.google.com/recaptcha/api.js" async defer></script>
+
+<script src="/vendor/plugins/js/plugins.min.js"></script>
+
+<!-- Theme Base, Components and Settings -->
+<script src="/js/theme.js"></script>
+
+<!-- Demo -->
+<script src="/js/demos/demo-architecture-2.js"></script>
+
+<!-- Theme Custom -->
+<script src="/js/custom.js"></script>
+
+<!-- Theme Initialization Files -->
+<script src="/js/theme.init.js"></script>
+
+<!-- Current Page Vendor and Views -->
+<script src="/js/views/view.contact.js"></script>
+
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB_ItkkySjVQGajyO77lE-_31a5ZVFN12U"></script>
+<script>
+
+    /*
+    Map Settings
+
+        Find the Latitude and Longitude of your address:
+            - https://www.latlong.net/
+            - http://www.findlatitudeandlongitude.com/find-address-from-latitude-and-longitude/
+
+    */
+
+    function initializeGoogleMaps() {
+        // Map Markers
+        var mapMarkers = [{
+            address: "Solid Electron",
+            html: "<strong>Porto Architecture 2</strong><br>Erciyes Teknopark",
+            icon: {
+                image: "/img/demos/architecture-2/logo.png",
+                iconsize: [31, 40],
+                iconanchor: [14, 40]
+            },
+            popup: false
+        }];
+        // 38.714141, 35.532830
+        // Map Initial Location
+        var initLatitude = 38.714141;
+        var initLongitude = 35.532830;
+
+        // Map Extended Settings
+        var mapSettings = {
+            controls: {
+                draggable: (($.browser.mobile) ? false : true),
+                panControl: true,
+                zoomControl: true,
+                mapTypeControl: true,
+                scaleControl: true,
+                streetViewControl: true,
+                overviewMapControl: true
+            },
+            scrollwheel: false,
+            markers: mapMarkers,
+            latitude: initLatitude,
+            longitude: initLongitude,
+            zoom: 15
+        };
+
+        var map = $('#googlemaps').gMap(mapSettings),
+            mapRef = $('#googlemaps').data('gMap.reference');
+
+        var mapRef = $('#googlemaps').data('gMap.reference');
+
+        // Styles from https://snazzymaps.com/
+        var styles = [{"featureType":"water","elementType":"geometry","stylers":[{"color":"#e9e9e9"},{"lightness":17}]},{"featureType":"landscape","elementType":"geometry","stylers":[{"color":"#f5f5f5"},{"lightness":20}]},{"featureType":"road.highway","elementType":"geometry.fill","stylers":[{"color":"#ffffff"},{"lightness":17}]},{"featureType":"road.highway","elementType":"geometry.stroke","stylers":[{"color":"#ffffff"},{"lightness":29},{"weight":0.2}]},{"featureType":"road.arterial","elementType":"geometry","stylers":[{"color":"#ffffff"},{"lightness":18}]},{"featureType":"road.local","elementType":"geometry","stylers":[{"color":"#ffffff"},{"lightness":16}]},{"featureType":"poi","elementType":"geometry","stylers":[{"color":"#f5f5f5"},{"lightness":21}]},{"featureType":"poi.park","elementType":"geometry","stylers":[{"color":"#dedede"},{"lightness":21}]},{"elementType":"labels.text.stroke","stylers":[{"visibility":"on"},{"color":"#ffffff"},{"lightness":16}]},{"elementType":"labels.text.fill","stylers":[{"saturation":36},{"color":"#333333"},{"lightness":40}]},{"elementType":"labels.icon","stylers":[{"visibility":"off"}]},{"featureType":"transit","elementType":"geometry","stylers":[{"color":"#f2f2f2"},{"lightness":19}]},{"featureType":"administrative","elementType":"geometry.fill","stylers":[{"color":"#fefefe"},{"lightness":20}]},{"featureType":"administrative","elementType":"geometry.stroke","stylers":[{"color":"#fefefe"},{"lightness":17},{"weight":1.2}]}];
+
+        var styledMap = new google.maps.StyledMapType(styles, {
+            name: 'Styled Map'
+        });
+
+        mapRef.mapTypes.set('map_style', styledMap);
+        mapRef.setMapTypeId('map_style');
+    }
+
+    // Initialize Google Maps when element enter on browser view
+    theme.fn.intObs( '.google-map', 'initializeGoogleMaps()', {} );
+
+    // Map text-center At
+    var mapCenterAt = function(options, e) {
+        e.preventDefault();
+        $('#googlemaps').gMap("centerAt", options);
+    }
+
+</script>

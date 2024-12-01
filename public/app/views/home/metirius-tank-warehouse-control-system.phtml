@@ -1,0 +1,52 @@
+<?php
+include V_PATH . '/_parts/_head.phtml';
+?>
+
+<?php
+$pageTitle = "Metirius Tank Warehouse Control Systems";
+include V_PATH . '/_parts/title.phtml';
+?>
+
+
+<section class="ls section_padding_top_20 section_padding_bottom_10">
+    <div class="container" style="margin-top:120px;">
+        <img style="width: 250px;margin-right:50px;" src="/img/logos/metirius.png"><br>
+        <p></p>
+        <div class="jumbotron p-1 p-md-1 bg-white">
+            <h2 class="display-4 " style="color: #605e5e;font-weight:600;font-size:27px;">
+            <?=LH::t("tank_w_c")?></h2>
+            <p></p>
+            <p style="color: #343a40; font-weight: normal;">
+            <?=LH::t("metirius_tank_panels_h_b")?> 
+            </p>
+        </div>
+
+        <h2 class="display-4 " style="color: #605e5e;font-weight:600;font-size:27px;">
+        <?=LH::t("used_materials")?></h2>
+
+        <div class="row mb-2" style="color: #343a40;font-weight: normal;">
+            <div class="col-md-6">
+                <ol class="list list-ordened">
+                    <li> <?=LH::t("isolation_transformer")?> </li>
+                    <li>  <?=LH::t("3_rs_485_p")?> </li>
+                    <li> <?=LH::t("hmi_display_(optional")?> </li>
+                    <li> <?=LH::t("pressure_sensor_entry")?>
+                    <li> <?=LH::t("ac/dc_battery_charging_s")?>
+                    <li> <?=LH::t("2_debimeter_input")?></li>
+                    <li> <?=LH::t("2_level_sensor_e")?></li>
+                    <li> <?=LH::t("digital_and_analog_i_m")?>
+                    <li> <?=LH::t("200_500_vac_o_2")?></li>
+                    <li><?=LH::t("hair/pvc_panel_by_a_a")?> 
+                    <li> <?=LH::t("iot_support_plc/rtu/industrial_p")?> </li>
+                    <li> <?=LH::t("gsm/rf_communication_device")?> </li>
+                    <li><?=LH::t("predixi_water_management_s_i")?>
+                </ol>
+            </div>
+            <div class="col-md-6">
+                <img style="height: 500px;" src="/img/predixi/tank.jpg">
+            </div>
+        </div>
+    </div>
+</section>
+
+<?php include V_PATH . '/_parts/_footer.phtml'; ?>

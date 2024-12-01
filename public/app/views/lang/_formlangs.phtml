@@ -1,0 +1,125 @@
+        <script>
+            var _activeEditItem;
+            var action;
+            var fields;
+
+            function clearForm(item) {
+
+                for (const key in item) {
+                    try {
+                        document.getElementById(key).value = "";
+                    } catch (_) {
+                        console.log(key, _)
+                    }
+                }
+            }
+
+            function formFill(item, fields) { //item example lid: 10, lang: 'tr', langTitle: 'Turkish', time: '14:33:03', timeCreated: '14:35:08' 
+                this.fields = fields
+                if (item) {
+                    _activeEditItem = item;
+
+                    for (key in item) {
+                        const inp = document.getElementById(key);
+                        if (inp) inp.value = item[key];
+                    }
+                    showForm(true)
+                } else {
+                    clearForm(_activeEditItem);
+                    showForm(true);
+
+                }
+
+            }
+
+            function showForm(show) {
+                document.getElementById('editform').style.display = show == true ? "flex" : "none";
+            }
+
+            async function update() {
+                if (_activeEditItem != undefined)
+                    action = "update";
+                else
+                    action = "insert";
+                console.log(action);
+                const fd = new FormData();
+                for (const key in this.fields) {
+                    inpVal = document.getElementById(key).value ?? undefined;
+                    if (inpVal != undefined)
+                        fd.append(key, inpVal);
+
+                }
+                fd.append("action", action);
+                let text = "-1";
+                try {
+
+
+                    const res = await fetch('./svcLangSave', {
+                        method: "POST",
+                        body: fd,
+                    })
+                    text = await res.text();
+                } catch (err) {
+                    // showStatus("error", 'sistem hata:' + err.message)
+                }
+
+            }
+            async function deleteItem() {
+
+                console.log(action);
+                const fd = new FormData();
+                for (const key in this.fields) {
+                    inpVal = document.getElementById(key).value ?? undefined;
+                    if (inpVal != undefined)
+                        fd.append(key, inpVal);
+
+                }
+                fd.append("action", "delete");
+                let text = "-1";
+                try {
+
+
+                    const res = await fetch('./svcLangSave', {
+                        method: "POST",
+                        body: fd,
+                    })
+                    text = await res.text();
+                } catch (err) {
+                    // showStatus("error", 'sistem hata:' + err.message)
+                }
+
+                // window.location.href = "";
+
+
+            }
+
+            function saveForm(e) {
+                update();
+                return false;
+            }
+        </script>
+
+        <form class="form-container" id="editform" onsubmit="event.preventDefault(); return saveForm(event);" style="display: none ; flex-direction: row;">
+            <!-- <form class="form-container" id="editform" style="display: none;"> -->
+            <div>
+                <h2 id="pageTitle"></h2>
+                <div class="form-row">
+
+                    <?php foreach ($FIELDS_FORM as $key => $value) : ?>
+                        <div class="input-field">
+                            <input type=<?= $value ?> id=<?= $key ?> required placeholder="" />
+                            <label for=<?= $key ?>><?= $key ?></label>
+                            <div class="bar"></div>
+                        </div>
+                    <?php endforeach; ?>
+                </div>
+
+                <div class="button-row">
+                    <button type="submit"><span>Kaydet</span></button>
+                    <button type="button" id="btnDel" onclick="deleteItem()"><span>Sil</span></button>
+                    <button type="button" id="btnCancel" onclick="showForm(false)"><span>İptal</span></button>
+                </div>
+                <h2 id="statusBar" style="padding:10px;"></h2>
+            </div>
+
+        </form>

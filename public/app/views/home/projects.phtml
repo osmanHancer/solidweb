@@ -1,0 +1,184 @@
+
+<?php
+include V_PATH . '/_parts/_head.phtml';
+?>
+<div role="main" class="main">
+<?php
+$pageTitle="Projelerimiz";
+include V_PATH . '/_parts/title.phtml';
+?>
+
+    <div class="custom-page-wrapper pt-5 pb-1">
+        <div class="container container-xl-custom pt-5 mt-5">
+            <div class="row py-5 mb-4">
+                <div class="col text-center position-relative">
+                    <div class="position-absolute transform3dx-n50 left-50pct z-index-0 appear-animation" data-appear-animation="fadeIn" data-appear-animation-delay="2000" style="top: 100px;">
+                        <h2 class="text-color-dark custom-stroke-text-effect-1 custom-big-font-size-1 font-weight-black opacity-1 mb-0">Projelerimiz</h2>
+                    </div>
+                    <div class="overflow-hidden mb-2">
+                        <h2 class="text-color-default positive-ls-3 line-height-3 text-4 mb-0 appear-animation" data-appear-animation="maskUp" data-appear-animation-delay="1500">İŞİMİZ</h2>
+                    </div>
+                    <div class="overflow-hidden mb-3">
+                        <h3 class="text-transform-none text-color-dark font-weight-black text-10 line-height-2 mb-0 appear-animation" data-appear-animation="maskUp" data-appear-animation-delay="1000">Seçilmiş Portföy</h3>
+                    </div>
+                    <img src="/img/demos/architecture-2/divider.jpg" class="img-fluid opacity-5 appear-animation" data-appear-animation="fadeInUpShorterPlus" data-appear-animation-delay="1000" alt="" />
+                </div>
+            </div>
+            <div class="row mb-4">
+                <div class="col">
+                    <ul class="nav nav-pills sort-source custom-nav-filter justify-content-center pb-2 mb-4 appear-animation" data-appear-animation="fadeInUpShorter" data-appear-animation-delay="1100" data-sort-id="portfolio" data-option-key="filter" data-plugin-options="{'layoutMode': 'masonry', 'filter': '*'}">
+                        <li class="nav-item active" data-option-value="*"><a class="nav-link active" href="#">HEPSİNİ GÖR</a></li>
+                        <li class="nav-item" data-option-value=".Productivity"><a class="nav-link" href="#">Üretkenlik</a></li>
+                        <li class="nav-item" data-option-value=".Energy"><a class="nav-link" href="#">Enerji</a></li>
+                        <li class="nav-item" data-option-value=".Management"><a class="nav-link" href="#">Yönetim</a></li>
+                 
+                    </ul>
+                    <div class="sort-destination-loader sort-destination-loader-showing appear-animation" data-appear-animation="fadeInUpShorter" data-appear-animation-delay="1000">
+                        <div id="loadMoreWrapper" class="row row-gutter-sm px-0 image-gallery sort-destination" data-sort-id="portfolio" data-total-pages="3">
+                            <div class="col-sm-6 col-md-4 isotope-item Productivity">
+                                <div class="portfolio-item mb-3 pb-1">
+                                    <!-- <a href="demo-architecture-2-projects-detail.html"> -->
+                                        <div class="thumb-info thumb-info-no-borders thumb-info-no-borders-rounded thumb-info-centered-icons border-radius-0">
+                                            <div class="thumb-info-wrapper border-radius-0">
+                                                <img src="/img/save-energy.jpeg" class="img-fluid border-radius-0" alt="">
+                                                <div class="thumb-info-action flex-column align-items-center">
+                                                    <h4 class="text-color-light font-weight-bold line-height-2 text-6 ls-0 mb-0">Project Name</h4>
+                                                    <p class="font-weight-semibold text-color-grey text-2 mb-0">DESIGN AND PLANNING</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="col-sm-6 col-md-4 isotope-item Productivity">
+                                <div class="portfolio-item mb-3 pb-1">
+                                    <!-- <a href="demo-architecture-2-projects-detail.html"> -->
+                                        <div class="thumb-info thumb-info-no-borders thumb-info-no-borders-rounded thumb-info-centered-icons border-radius-0">
+                                            <div class="thumb-info-wrapper border-radius-0">
+                                                <img src="/img/time_cost.jpg" class="img-fluid border-radius-0" alt="">
+                                                <div class="thumb-info-action flex-column align-items-center">
+                                                    <h4 class="text-color-light font-weight-bold line-height-2 text-6 ls-0 mb-0">Project Name</h4>
+                                                    <p class="font-weight-semibold text-color-grey text-2 mb-0">DESIGN AND PLANNING</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="col-sm-6 col-md-4 isotope-item Productivity">
+                                <div class="portfolio-item mb-3 pb-1">
+                                    <!-- <a href="demo-architecture-2-projects-detail.html"> -->
+                                        <div class="thumb-info thumb-info-no-borders thumb-info-no-borders-rounded thumb-info-centered-icons border-radius-0">
+                                            <div class="thumb-info-wrapper border-radius-0">
+                                                <img src="/img/work_group.jpg" class="img-fluid border-radius-0" alt="">
+                                                <div class="thumb-info-action flex-column align-items-center">
+                                                    <h4 class="text-color-light font-weight-bold line-height-2 text-6 ls-0 mb-0">Project Name</h4>
+                                                    <p class="font-weight-semibold text-color-grey text-2 mb-0">DESIGN AND PLANNING</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="col-sm-6 col-md-4 isotope-item Energy">
+                                <div class="portfolio-item mb-3 pb-1">
+                                    <!-- <a href="demo-architecture-2-projects-detail.html"> -->
+                                        <div class="thumb-info thumb-info-no-borders thumb-info-no-borders-rounded thumb-info-centered-icons border-radius-0">
+                                            <div class="thumb-info-wrapper border-radius-0">
+                                                <img src="/img/world-water.jpg" class="img-fluid border-radius-0" alt="">
+                                                <div class="thumb-info-action flex-column align-items-center">
+                                                    <h4 class="text-color-light font-weight-bold line-height-2 text-6 ls-0 mb-0">Project Name</h4>
+                                                    <p class="font-weight-semibold text-color-grey text-2 mb-0">DESIGN AND PLANNING</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="col-sm-6 col-md-4 isotope-item Energy">
+                                <div class="portfolio-item mb-3 pb-1">
+                                    <!-- <a href="demo-architecture-2-projects-detail.html"> -->
+                                        <div class="thumb-info thumb-info-no-borders thumb-info-no-borders-rounded thumb-info-centered-icons border-radius-0">
+                                            <div class="thumb-info-wrapper border-radius-0">
+                                                <img src="/img/technology_1.jpg" class="img-fluid border-radius-0" alt="">
+                                                <div class="thumb-info-action flex-column align-items-center">
+                                                    <h4 class="text-color-light font-weight-bold line-height-2 text-6 ls-0 mb-0">Project Name</h4>
+                                                    <p class="font-weight-semibold text-color-grey text-2 mb-0">DESIGN AND PLANNING</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="col-sm-6 col-md-4 isotope-item Energy">
+                                <div class="portfolio-item mb-3 pb-1">
+                                    <!-- <a href="demo-architecture-2-projects-detail.html"> -->
+                                        <div class="thumb-info thumb-info-no-borders thumb-info-no-borders-rounded thumb-info-centered-icons border-radius-0">
+                                            <div class="thumb-info-wrapper border-radius-0">
+                                                <img src="/img/manage_about.jpg" class="img-fluid border-radius-0" alt="">
+                                                <div class="thumb-info-action flex-column align-items-center">
+                                                    <h4 class="text-color-light font-weight-bold line-height-2 text-6 ls-0 mb-0">Project Name</h4>
+                                                    <p class="font-weight-semibold text-color-grey text-2 mb-0">DESIGN AND PLANNING</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="col-sm-6 col-md-4 isotope-item Management">
+                                <div class="portfolio-item mb-3 pb-1">
+                                    <!-- <a href="demo-architecture-2-projects-detail.html"> -->
+                                        <div class="thumb-info thumb-info-no-borders thumb-info-no-borders-rounded thumb-info-centered-icons border-radius-0">
+                                            <div class="thumb-info-wrapper border-radius-0">
+                                                <img src="/img/technology_3.jpg" class="img-fluid border-radius-0" alt="">
+                                                <div class="thumb-info-action flex-column align-items-center">
+                                                    <h4 class="text-color-light font-weight-bold line-height-2 text-6 ls-0 mb-0">Project Name</h4>
+                                                    <p class="font-weight-semibold text-color-grey text-2 mb-0">DESIGN AND PLANNING</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="col-sm-6 col-md-4 isotope-item Management">
+                                <div class="portfolio-item mb-3 pb-1">
+                                    <!-- <a href="demo-architecture-2-projects-detail.html"> -->
+                                        <div class="thumb-info thumb-info-no-borders thumb-info-no-borders-rounded thumb-info-centered-icons border-radius-0">
+                                            <div class="thumb-info-wrapper border-radius-0">
+                                                <img src="/img/money.jpg" class="img-fluid border-radius-0" alt="">
+                                                <div class="thumb-info-action flex-column align-items-center">
+                                                    <h4 class="text-color-light font-weight-bold line-height-2 text-6 ls-0 mb-0">Project Name</h4>
+                                                    <p class="font-weight-semibold text-color-grey text-2 mb-0">DESIGN AND PLANNING</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row justify-content-center appear-animation" data-appear-animation="fadeInUpShorter">
+                <div id="loadMoreBtnWrapper" class="row text-center mt-3">
+                    <div class="col">
+                        <div id="loadMoreLoader" class="load-more-loader">
+                            <div class="bounce-loader">
+                                <div class="bounce1"></div>
+                                <div class="bounce2"></div>
+                                <div class="bounce3"></div>
+                            </div>
+                        </div>
+                        <button id="loadMore" class="btn btn-primary custom-btn-style-1 font-weight-bold text-3 px-5 py-3 mb-5">DAHA FAZLA GÖSTER+
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+<?php
+include V_PATH . '/_parts/_footer.phtml';
+?>

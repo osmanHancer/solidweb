@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+	<!-- Basic -->
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Solid Electron | Passion of control</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta content="text/html; charset=iso-8859-2" http-equiv="Content-Type">
+	<meta name="description" content="Solid Electron | Passion for control">
+
+	<!-- Favicon -->
+	<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+	<link rel="icon" type="image/png" sizes="192x192" href="\img\icons\solid_icon.png">
+	<link rel="apple-touch-icon" href="/img/apple-touch-icon.png">
+
+	<!-- Mobile Metas -->
+	<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1.0, shrink-to-fit=no">
+
+	<!-- Web Fonts  -->
+	<link id="googleFonts" href="/css/gfonts.css" rel="stylesheet" type="text/css">
+
+	<!-- //vendor CSS -->
+	<link rel="stylesheet" href="/vendor/bootstrap/css/bootstrap.min.css">
+	<link rel="stylesheet" href="/vendor/fontawesome-free/css/all.min.css">
+	<link rel="stylesheet" href="/vendor/animate/animate.compat.css">
+	<link rel="stylesheet" href="/vendor/simple-line-icons/css/simple-line-icons.min.css">
+	<link rel="stylesheet" href="/vendor/owl.carousel/assets/owl.carousel.min.css">
+	<link rel="stylesheet" href="/vendor/owl.carousel/assets/owl.theme.default.min.css">
+	<link rel="stylesheet" href="/vendor/magnific-popup/magnific-popup.min.css">
+
+	<!-- Theme CSS -->
+	<link rel="stylesheet" href="/css/theme.css">
+	<link rel="stylesheet" href="/css/icon.css">
+	<link rel="stylesheet" href="/css/theme-elements.css">
+	<link rel="stylesheet" href="/css/theme-blog.css">
+	<link rel="stylesheet" href="/css/theme-shop.css">
+
+	<!-- Demo CSS -->
+	<link rel="stylesheet" href="/css/demos/demo-architecture-2.css">
+
+	<!-- Skin CSS -->
+	<link id="skinCSS" rel="stylesheet" href="/css/skins/skin-architecture-2.css">
+	<link id="skinCSS" rel="stylesheet" href="/css/skins/default.css">
+	<!-- Theme Custom CSS -->
+	<link rel="stylesheet" href="/css/custom.css">
+
+	<!-- Head Libs -->
+	<script src="/vendor/modernizr/modernizr.min.js"></script>
+	<!-- <script src="/js/langscript.js"></script> -->
+
+
+</head>
+
+<body class="loading-overlay-showing" data-loading-overlay data-plugin-page-transition>
+	<div class="loading-overlay">
+		<div class="bounce-loader">
+			<div class="bounce1"></div>
+			<div class="bounce2"></div>
+			<div class="bounce3"></div>
+		</div>
+	</div>
+
+	<div class="body">
+		<header id="header" class="header-transparent header-effect-shrink" data-plugin-options="{'stickyEnabled': true, 'stickyEffect': 'shrink', 'stickyEnableOnBoxed': true, 'stickyEnableOnMobile': false, 'stickyHeaderContainerHeight': 80, 'stickyStartAt': 50, 'stickyChangeLogo': false}">
+			<div class="header-body border-top-0 bg-primary appear-animation" data-appear-animation="fadeInUpShorterPlus" data-appear-animation-delay="200" data-plugin-options="{'forceAnimation': true}">
+				<div class="header-container container-fluid">
+					<div class="header-row">
+						<div class="header-column align-items-start justify-content-center">
+							<div class="header-logo z-index-2 col-lg-2 px-0">
+								<a h href="/<?= $lang ?>/home">
+									<img alt="Porto" width="200" height="60" src="/img/svg/icon.svg" style=" object-fit: contain;"></a>
+							</div>
+						</div>
+						<div class="header-column flex-row justify-content-end justify-content-lg-center">
+							<div class="header-nav header-nav-line header-nav-bottom-line header-nav-bottom-line-effect-1 header-nav-dropdowns-dark header-nav-light-text justify-content-end">
+								<div class="header-nav-main header-nav-main-arrows header-nav-main-mobile-dark header-nav-main-dropdown-no-borders header-nav-main-effect-3 header-nav-main-sub-effect-1">
+									<nav class="collapse">
+										<ul class="nav nav-pills" id="mainNav">
+											<li><a href="/<?= $lang ?>/" class="nav-link <?= $page == 'home' ? 'active' : '' ?>"><?= LH::t("home") ?></a></li>
+											<li class="dropdown">
+												<a href="#" class="nav-link dropdown-toggle"><?= LH::t("products") ?></a>
+												<ul class="dropdown-menu">
+													<li><a href="/<?= $lang ?>/predixi-cloud-water-control-software" class="dropdown-item <?= $page == 'predixi-cloud-water-control-software' ? 'active' : '' ?>"><?= LH::t("predixi_cloud_water_c_s") ?></a></li>
+													<li><a href="/<?= $lang ?>/aquaguide" class="dropdown-item <?= $page == 'aquaguide' ? 'active' : '' ?>"><?= LH::t("aqua_guide") ?></a></li>
+													<li><a href="/<?= $lang ?>/app-download" class="dropdown-item <?= $page == 'app-download' ? 'active' : '' ?>"><?= LH::t("appdownload") ?></a></li>
+													<li class="dropdown-submenu">
+														<a href="/<?= $lang ?>/metirius-water-management-devices" class="nav-link <?= $page == 'metirius-water-management-devices' ? 'active' : '' ?>"><?= LH::t("metirus_water_control_d") ?></a>
+														<ul class="dropdown-menu">
+															<li><a href="/<?= $lang ?>/metirius-tank-warehouse-control-system" class="dropdown-item <?= $page == 'metirius-tank-warehouse-control-system' ? 'active' : '' ?> "><?= LH::t("metirius_tank_w") ?></a></li>
+															<li><a href="/<?= $lang ?>/metirius-pump-pump-control-system" class="dropdown-item  <?= $page == 'metirius-pump-pump-control-system' ? 'active' : '' ?> "><?= LH::t("metirius_wellpro_p") ?></a></li>
+															<li><a href="/<?= $lang ?>/metirius-ww-wastewater-control-system" class="dropdown-item  <?= $page == 'metirius-ww-wastewater-control-system' ? 'active' : '' ?> "><?= LH::t("metirius_ww_w") ?></a></li>
+															<li><a href="/<?= $lang ?>/metirius-network-mains-control-system" class="dropdown-item <?= $page == 'metirius-network-mains-control-system' ? 'active' : '' ?>"><?= LH::t("metirius_network_n") ?></a></li>
+															<li><a href="/<?= $lang ?>/metirius-limit-flow-control-system" class="dropdown-item <?= $page == 'metirius-limit-flow-control-system' ? 'active' : '' ?>"><?= LH::t("metirius_limit_flow_c_s") ?></a></li>
+													</li>
+
+
+												</ul>
+											</li>
+
+										</ul>
+										</li>
+										<li class="dropdown">
+											<a href="#" class="nav-link dropdown-toggle"><?= LH::t("projects") ?></a>
+											<ul class="dropdown-menu">
+												<li><a href="/<?= $lang ?>/water-management" class="dropdown-item <?= $page == 'water-management' ? 'active' : '' ?>"><?= LH::t("water_management") ?></a></li>
+												<li><a href="/<?= $lang ?>/energy-efficiency" class="dropdown-item <?= $page == 'energy-efficiency' ? 'active' : '' ?>"><?= LH::t("energy_efficiency") ?></a></li>
+											</ul>
+										</li>
+										<li class="dropdown">
+											<a href="/<?= $lang ?>/about" class="nav-link dropdown-toggle <?= $page == 'about' ? 'active' : '' ?>"><?= LH::t("about_us") ?></a>
+											<ul class="dropdown-menu">
+												<li><a href="/<?= $lang ?>/terms-of-services" class="dropdown-item  <?= $page == 'terms-of-services' ? 'active' : '' ?>"><?= LH::t("terms_of_use") ?></a></li>
+												<li><a href="/<?= $lang ?>/logos" class="dropdown-item  <?= $page == 'logos' ? 'active' : '' ?>"><?= LH::t("logos") ?></a></li>
+												<li><a href="/<?= $lang ?>/kvkk-bilgilendirme-metni" class="dropdown-item <?= $page == 'kvkk-bilgilendirme-metni' ? 'active' : '' ?>"><?= LH::t("kvkk_information_text") ?></a></li>
+											</ul>
+										</li>
+
+
+										<li><a href="/<?= $lang ?>/contact" class="nav-link <?= $page == 'contact' ? 'active' : '' ?>"><?= LH::t("contact") ?></a></li>
+
+										<?php
+										include  APP_PATH . '/views/_shared/lang.phtml';
+										?>
+										</ul>
+									</nav>
+								</div>
+							</div>
+							<div class="header-nav-features ps-0 ms-3">
+								<div class="header-nav-features-search-reveal-container">
+									<div class="header-nav-feature header-nav-features-search header-nav-features-search-reveal d-inline-flex">
+										<a href="#" class="header-nav-features-search-show-icon d-inline-flex text-decoration-none"></a>
+									</div>
+								</div>
+							</div>
+
+							<button class="btn header-btn-collapse-nav bg-transparent border-0 text-4 position-relative top-2 p-0 ms-4" data-bs-toggle="collapse" data-bs-target=".header-nav-main nav">
+								<i class="fas fa-bars"></i>
+							</button>
+
+
+
+
+
+						</div>
+						<div class="header-column align-items-center justify-content-center d-none d-lg-flex">
+							<ul class="header-social-icons social-icons social-icons-clean social-icons-icon-light social-icons-medium custom-social-icons-divider">
+
+								<li class="social-icons-linkedin">
+									<a href="https://www.linkedin.com/company/solid-electron/company/solid-electron/" target="_blank" title="Linkedin"><i class="fab fa-linkedin-in"></i></a>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+
+		</header>

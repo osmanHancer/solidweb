@@ -1,0 +1,255 @@
+body {
+  padding: 0;
+  margin: 0;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.main-container {
+  display: flex;
+  flex-direction: row;
+}
+
+a, a:hover, a:visited, a:active {
+  color: inherit;
+  width: 100%;
+ }
+a:hover{
+  background: #009879;
+}
+.menu-container {
+  z-index: 999;
+  width: 180px;
+  min-height: 100vh;
+  color: #271e1e;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  background-color: #a895e2;
+  position: relative;
+  
+   .menu-item {
+    display: flex;
+    flex-direction: row;
+    font-size: 18px;
+    text-decoration: none;
+    margin-left: 10px;
+    margin-top: 10px;
+    }
+    .menu-header {
+      width: 100%;
+      
+      background-color: #198a55;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+    }
+}
+
+
+
+.h1,
+h1 {
+  font-size: 15 !important;
+}
+
+.styled-table {
+  border-collapse: collapse;
+  margin: 0px 0;
+  font-size: 0.9em;
+  font-family: sans-serif;
+  min-width: 400px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+}
+
+.styled-table thead tr {
+  background-color: #5bb0b6;
+  color: #181616;
+  text-align: left;
+}
+
+.styled-table th,
+.styled-table td {
+  padding: 12px 15px;
+}
+
+.styled-table tbody tr {
+  border-bottom: 1px solid #dddddd;
+}
+
+.styled-table tbody tr:nth-of-type(even) {
+  background-color: #f3f3f3;
+}
+
+.styled-table tbody tr:last-of-type {
+  border-bottom: 2px solid #009879;
+}
+
+.styled-table tbody tr:hover {
+  background-color: #deefd3 !important;
+  box-shadow: 0px 9px 4px -6px grey !important;
+}
+
+#infoBox a {
+  margin-top: 15px;
+  display: block;
+}
+
+#infoBox #userImage {
+  object-fit: contain;
+  max-width: 400px;
+  object-position: top;
+  height: 400px;
+  margin: 20px auto;
+}
+
+.form-container {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  align-items: flex-start;
+  flex-wrap: wrap;
+}
+
+.form-row {
+  display: flex;
+  width: 50%;
+  flex-wrap: wrap;
+}
+
+.input-field {
+  position: relative;
+  margin: 10px 10px;
+  width: 300px;
+}
+
+.input-field input,
+.input-field select,
+.input-field textarea {
+  outline: none;
+  z-index: 1;
+  position: relative;
+  background: none;
+  width: 100%;
+  height: 35px;
+  border: 0;
+  color: #111;
+  font-size: 16px;
+  font-weight: 300;
+}
+
+.input-field input:focus ~ .bar:before,
+.input-field input:focus ~ .bar:after,
+.input-field select:focus ~ .bar:before,
+.input-field select:focus ~ .bar:after,
+.input-field textarea:focus ~ .bar:before,
+.input-field textarea:focus ~ .bar:before {
+  width: 50%;
+  background-color: #000;
+}
+
+.input-field input:focus ~ label,
+.input-field input:not(:placeholder-shown) ~ label,
+.input-field select:focus ~ label,
+.input-field select:not(:placeholder-shown) ~ label,
+.input-field textarea:focus ~ label,
+.input-field textarea:not(:placeholder-shown) ~ label {
+  color: #888;
+  transform: translate(-12%, -60%) scale(0.75);
+}
+
+.input-field label {
+  position: absolute;
+  top: 0;
+  left: 0;
+  color: #757575;
+  font-size: 18px;
+  font-weight: 300;
+  line-height: 35px;
+  transition: 0.2s ease;
+}
+
+.input-field .bar {
+  position: absolute;
+  left: 0;
+  bottom: 5px;
+  background: #777;
+  width: 100%;
+  height: 1px;
+}
+
+.input-field .bar:before,
+.input-field .bar:after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 2px;
+  transition: 0.3s ease;
+}
+
+.input-field .bar:before {
+  left: 50%;
+}
+
+.input-field .bar:after {
+  right: 50%;
+}
+
+.input-field input:invalid:not(:placeholder-shown) ~ .bar:before,
+.input-field input:invalid:not(:placeholder-shown) ~ .bar:after {
+  background-color: rgb(179, 52, 52);
+  width: 50%;
+}
+
+.input-field input:valid:not(:placeholder-shown) ~ .bar:before,
+.input-field input:valid:not(:placeholder-shown) ~ .bar:after {
+  background-color: rgb(69, 163, 62);
+  width: 50%;
+}
+
+/* .input-field input:not(:valid)~.bar:before ,.input-field input:not(:valid)~.bar:after {
+    background-color: #D88;
+    width: 50%;
+
+} */
+
+.button-row {
+  display: flex;
+  flex-direction: row;
+
+}
+
+button {
+  transition: 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  cursor: pointer;
+  position: relative;
+  min-width: 70px;
+  min-height: 30px;
+  background-color: #5bb0b6;
+  border-radius: 5px;
+  font-size: 14px;
+  text-align: center;
+  text-transform: uppercase;
+  overflow: hidden;
+  margin: 3px 3px;
+  &:active,
+  &:hover,
+  &:focus {
+    background-color: #41e97f;
+  }
+
+  & > span {
+    position: relative;
+    z-index: 1;
+    color: #111;
+  }
+}
+
+td:has(button) {
+  display: flex;
+  
+
+}

@@ -1,0 +1,13 @@
+services:
+  phpweb:
+    build:
+      context: ./
+      dockerfile: alpine.Dockerfile
+    container_name: solid_web
+    hostname: solid_web
+    ports:
+      - '8081:8081'
+    volumes:
+      - ./:/app
+      - ../vcard:/vcard # link to another site. look Dockerfile
+  

@@ -1,0 +1,114 @@
+<?php include V_PATH . '/_parts/_head.phtml'; ?>
+<div role="main" class="main">
+    <?php
+    $pageTitle = "Predix Water Control Software";
+    include V_PATH . '/_parts/title.phtml';
+    ?>
+
+
+
+    <section class="ls section_padding_top_50 section_padding_bottom_100">
+        <div class="container" id="cont_id" style="margin-top:130px;">
+            <div class="jumbotron p-1 p-md-1 bg-white">
+                <h2 class="display-4 " style="color: #605e5e;font-weight:600;font-size:27px;">
+                    <?= LH::t("predixi_c") ?> </h2>
+                <p></p>
+                <p style="color: #343a40; font-weight: normal;">
+                    <?= LH::t("PredIXI_consists") ?></p>
+                </p>
+            </div>
+
+            <h2 class="display-4 " style="color: #605e5e;font-weight:600;font-size:20px;"><?= LH::t("screenshots_of_our_a") ?></h2>
+
+            <div class="container">
+                <div class="row">
+                    <div class="col">
+                        <div class="owl-carousel nav-inside show-nav-hover dots-inside mb-0" data-plugin-options="{'items': 1, 'loop': true, 'autoplay': true, 'autoplayTimeout': 3000, 'autoplayHoverPause': false, 'nav': true, 'dots': true, 'animateOut': 'fadeOut'}">
+                            <div>
+                                <img src="/img/predixi/6.png" data-thumb="img/slides/slide-1.jpg" alt="" />
+                            </div>
+                            <div>
+                                <img src="/img/predixi/1.png" data-thumb="img/slides/slide-2.jpg" alt="" />
+                            </div>
+                            <div>
+                                <img src="/img/predixi/2.png" data-thumb="img/slides/slide-2.jpg" alt="" />
+                            </div>
+                            <div>
+                                <img src="/img/predixi/3.png" data-thumb="img/slides/slide-2.jpg" alt="" />
+                            </div>
+                            <div>
+                                <img src="/img/predixi/4.png" data-thumb="img/slides/slide-2.jpg" alt="" />
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+
+
+
+
+</div>
+
+
+
+<div id="examples" class="container py-2">
+
+    <div class="row">
+        <div class="col">
+
+            <div class="row" style="text-align:center">
+                <div class="col">
+                    <h4><?= LH::t("technicial_specifications") ?></h4>
+                </div>
+            </div>
+
+            <div class="row" style="display: flex;flex-direction: row-reverse;">
+                <div class="col-lg-6">
+
+                    <ul class="list list-icons">
+                        <li><i class="fa-solid fa-globe"></i> <?= LH::t("access_via_web") ?></li>
+                        <li><i class="fas fa-circle-nodes"></i><?= LH::t("mqtt_protocol_support") ?></li>
+                        <li><i class="fas fa-users-rectangle"></i><?= LH::t("multiple_user_support") ?></li>
+                        <li><i class="fas fa-person"></i><?= LH::t("customizable_alarms") ?></li>
+                        <li><i class="fas fa-network-wired"></i><?= LH::t("openvpn_serverclient_support") ?></li>
+                        <li><i class="fas fa-infinity"></i><?= LH::t("unlimited*_record_field_p") ?></li>
+                        <li><i class="fas fa-cloud-download-alt"></i><?= LH::t("modbus_tcp_master_p_s") ?></li>
+                        <li><i class="fas fa-sms"></i><?= LH::t("sms_mail_a_a") ?></li>
+                        <li><i class="fas fa-tablet-screen-button"></i><?= LH::t("edited_control_screens_a_s") ?>
+                        <li><i class="fas fa-users"></i><?= LH::t("user_groups_and_a_a") ?></li>
+                    </ul>
+
+                </div>
+                <div class="col-lg-6">
+
+                    <ul class="list list-icons list-icons-reverse">
+                        <ul class="list list-icons list-icons-reverse">
+                            <li><?= LH::t("excel_pdf_a") ?><i class="fa-regular fa-file-pdf"></i></li>
+                            <li><?= LH::t("adjustable_data_collection_r") ?><i class="fa-solid fa-gear"></i></li>
+                            <li><?= LH::t("customizable_data_point_f") ?><i class="fa-solid fa-filter"></i></li>
+                            <li><?= LH::t("mysqlperconamariadb_database_support") ?> <i class="fa-solid fa-database"></i></li>
+                            <li><?= LH::t("calculates_based_on_s_c") ?> <i class="fa-solid fa-server"></i></li>
+                            <li><?= LH::t("creating_backup_of_s_f") ?> <i class="fa-solid fa-location-pin"></i></li>
+                            <li><?= LH::t("unlimited_real_time_d_c") ?><i class="fa-solid fa-magnifying-glass-chart"></i></li>
+                            <li><?= LH::t("unlimited_historical_data_s_c") ?><i class="fa-solid fa-rotate-left"></i></li>
+                            <li><?= LH::t("can_work_on_u_o") ?> <i class="fa-brands fa-windows"></i></li>
+                            <li><?= LH::t("customizable_productionconsumption_reports_a_s") ?><i class="fa-solid fa-note-sticky"></i></li>
+                        </ul>
+                    </ul>
+
+                </div>
+            </div>
+
+
+        </div>
+    </div>
+
+</div>
+
+</section>
+
+<?php include V_PATH . '/_parts/_footer.phtml'; ?>

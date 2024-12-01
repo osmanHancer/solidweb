@@ -1,0 +1,8 @@
+<?php
+$lcount = count(LH::$dict);
+if ($lcount > 0)
+	exit('health_check_ok');
+else {
+	exit('health_check_err');
+}
+echo '<br/>' . $lcount;

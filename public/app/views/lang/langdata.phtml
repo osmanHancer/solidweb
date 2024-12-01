@@ -1,0 +1,123 @@
+<?php
+include __DIR__ . "/_head.phtml";
+?>
+
+
+<script lang="ts">
+    const data = <?php echo json_encode($data ?? null) ?>;
+    let key = <?= json_encode($key) ?>;
+
+    async function save(event, index) {
+
+        const fd = new FormData();
+        let lval = document.getElementById("input_" + index).innerText;
+        //    lval=lval.replace("\n","<br/>");
+        fd.append("kid", data[index].kid);
+        fd.append("lval", lval);
+        fd.append("lid", key);
+        let json = "-1";
+        try {
+
+
+            const res = await fetch('./svcDataSave', {
+                method: "POST",
+                body: fd,
+            })
+            json = await res.json();
+            if (json.data.ar)
+                event.target.style.backgroundColor = "#1A1";
+            else
+                event.target.style.backgroundColor = "#A22";
+
+
+        } catch (err) {
+            // showStatus("error", 'sistem hata:' + err.message)
+        }
+
+    }
+    async function checked(event, index) {
+
+        const fd = new FormData();
+        let lval = document.getElementById("input_" + index).innerText;
+        //    lval=lval.replace("\n","<br/>");
+        fd.append("kid", data[index].kid);
+        fd.append("lval", lval);
+        fd.append("lid", key);
+        fd.append("checked",  data[index].checked+1);
+        let json = "-1";
+        try {
+
+
+            const res = await fetch('./svcDataSave', {
+                method: "POST",
+                body: fd,
+            })
+            json = await res.json();
+            if (json.data.ar)
+                event.target.style.backgroundColor = "#1A1";
+            else
+                event.target.style.backgroundColor = "#A22";
+
+
+        } catch (err) {
+            // showStatus("error", 'sistem hata:' + err.message)
+        }
+
+    }
+
+
+    function isKeyPressed(event, index) {
+
+        if (event.ctrlKey) {
+            save(index);
+        } else {
+
+        }
+    }
+</script>
+<h2 style="width: 100%;background-color: #DEEFD3;"><?= $lang["langTitle"] ?></h2>
+<table id="vcardList" class="styled-table">
+    <thead>
+        <tr>
+            <?php foreach ($TABLE_FIELDS as $value) : ?>
+                <th style="max-width: 250px;  word-wrap: break-word;"> <?php echo $value; ?></th>
+            <?php endforeach; ?>
+            <td>
+            </td>
+        </tr>
+    </thead>
+    <tbody>
+        <?php foreach ($data as $key => $value) : ?>
+            <tr>
+
+                <td> <?php echo $value["kid"] ?></td>
+                <td> <?php echo $value["lkey"] ?></td>
+                <td>
+                    <div>
+
+                        <pre id="input_<?= $key ?>" contenteditable="true" onkeyup="isKeyPressed(event,<?= $key ?>)" style=" white-space:pre-wrap; word-wrap:break-word; "><?= $value["lval"] ?> </pre>
+                        <div class="bar"></div>
+                    </div>
+                </td>
+                <td> <?php echo $value["checked"] ?></td>
+                
+
+                <td>
+                    <button style="background-color:blueviolet;" type="button" class="btn btn-secondary" onclick="checked(event,'<?= $key ?>')">Checked</button>
+                </td>
+                
+                <td>
+                    <button  type="button" class="btn btn-secondary" onclick="save(event,'<?= $key ?>')">Save</button>
+                </td>
+            </tr>
+        <?php endforeach; ?>
+    </tbody>
+</table>
+
+
+
+
+
+<?php
+include __DIR__ . "/_footer.phtml";
+?>

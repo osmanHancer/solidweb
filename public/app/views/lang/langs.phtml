@@ -1,0 +1,57 @@
+<?php
+include __DIR__ . "/_head.phtml";
+
+?>
+
+<script>
+    const lang_data = <?php echo json_encode($lang_data ?? null) ?>;
+    let FIELDS_FORM = <?= json_encode($FIELDS_FORM) ?>;
+    let TABLE_FIELDS = <?= json_encode($TABLE_FIELDS) ?>;
+    console.log(lang_data);
+
+    async function edit(index) {
+
+        const _activeEditItem = index > -1 ? lang_data[index] : null;
+        formFill(_activeEditItem, FIELDS_FORM);
+    }
+</script>
+<?php require_once __DIR__ . "/_formlangs.phtml"; ?>
+
+<table id="vcardList" class="styled-table">
+    <thead>
+        <tr>
+            <?php foreach ($TABLE_FIELDS as $value) : ?>
+                <th style="max-width: 250px;  word-wrap: break-word;"> <?php echo $value; ?></th>
+            <?php endforeach; ?>
+            <td>
+                <button type="button" class="btn btn-secondary" onclick="edit(`-1`)">Ekle</button>
+
+            </td>
+        </tr>
+    </thead>
+    <tbody>
+        <?php foreach ($lang_data as $key => $value) : ?>
+            <tr id="row_<?= $value ?>">
+                <?php foreach ($TABLE_FIELDS as $h) : ?>
+                    <td style="max-width: 250px;  word-wrap: break-word;">
+                        <?=$value[$h] ?>
+                    </td>
+                <?php endforeach; ?>
+                <td>
+                    <button type="button" class="btn btn-secondary" onclick="edit('<?= $key ?>')">Edit</button>
+                    <button onclick="window.location.href='./langdata?lid=<?= $value['lid'] ?>'" class="btn btn-secondary">See Data</button>
+
+                </td>
+
+            </tr>
+        <?php endforeach; ?>
+    </tbody>
+</table>
+
+
+
+
+
+<?php
+include __DIR__ . "/_footer.phtml";
+?>
